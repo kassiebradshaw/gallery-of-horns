@@ -1,20 +1,26 @@
 import HornedBeast from './HornedBeast.js';
 import React from 'react';
+import { CardDeck } from 'react-bootstrap'
+
 
 class Main extends React.Component {
   render() {
     return (
-      this.props.beasts.map((thisBeast, index) => {
-        return (
-          <div key={index}>
-            <HornedBeast
-              title={thisBeast.title}
-              img_url={thisBeast.img_url}
-              description={thisBeast.description}
-             />
-          </div>
-        )
-      })
+      <>
+        <CardDeck>
+          {this.props.beasts.map((thisBeast, index) => {
+            return (
+              <div key={index}>
+                <HornedBeast
+                  title={thisBeast.title}
+                  img={thisBeast.image_url}
+                  description={thisBeast.description}
+                 />
+              </div>
+            )
+          })}
+        </CardDeck>
+      </>
     )
   }
 }
