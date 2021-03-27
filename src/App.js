@@ -4,10 +4,6 @@ import Header from './Header.js';
 import Main from './Main.js';
 import React from 'react';
 import SelectedBeast from './SelectedBeast'
-
-import Modal from 'react-bootstrap/Modal';
-import Button from 'react-bootstrap/Button';
-
 import data from './data.json';
 
 class App extends React.Component {
