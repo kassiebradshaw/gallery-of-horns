@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card } from 'react-bootstrap';
+import Card from 'react-bootstrap/Card';
 
 class HornedBeast extends React.Component {
   constructor(props) {
@@ -12,6 +12,7 @@ class HornedBeast extends React.Component {
 
   buttonClicked = () => {
     this.setState({ favClicks: this.state.favClicks + 1 });
+    this.props.showModal(this.props.title);
   }
 
   render() {

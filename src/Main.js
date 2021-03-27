@@ -1,6 +1,6 @@
 import HornedBeast from './HornedBeast.js';
 import React from 'react';
-import { CardDeck } from 'react-bootstrap'
+import CardDeck from 'react-bootstrap/CardDeck'
 
 
 class Main extends React.Component {
@@ -12,6 +12,7 @@ class Main extends React.Component {
             return (
               <div key={index}>
                 <HornedBeast
+                  showModal={this.props.showModal}
                   title={thisBeast.title}
                   img={thisBeast.image_url}
                   description={thisBeast.description}
